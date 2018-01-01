@@ -1,0 +1,23 @@
+{
+  "name": "hotelspro-sdk-node",
+  "version": "1.0.0",
+  "description": "SDK for Hotlels pro suppliers",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@osama_github:elmashad/Hotelspro.git"
+  },
+  "author": "Osama Elmashad",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.17.1"
+  }
+}
