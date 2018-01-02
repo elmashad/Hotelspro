@@ -4,24 +4,29 @@ const credentials = {
     username: 'CarsolizeCoral',
     password: 'Bm?q"]xZ&gZ658rM',
 };
-const hotelPro = new HotelPro(credentials, 'https://api-test.hotelspro.com/api/v2/search/');
+const hotelPro = new HotelPro('https://api-test.hotelspro.com/api/v2/','search/',credentials);
 
 
-const data =  hotelPro.search({
-        'checkInDate': '',
-        'checkoutDate': '',
-        'cityId' : '',
-        'rooms': [
-            {
-                'adults': 2,
-                'kids': 1
-            },
-            {
-                'adults': 3,
-                'kids': 2
-            }
-        ]
+const data = hotelPro.search({
+    'checkInDate': '2018-01-25',
+    'checkoutDate': '2018-01-26',
+    'currency': 'USD',
+    'nationality': 'cn',
+    'destination': {
+        'type': 1,
+        'destinationId': '19064'
+    },
+    'rooms': [
+        {
+            'adultsCount': 2,
+            'kidsAges': [2, 5],
+        },
+        {
+            'adultsCount': 3,
+            'kidsAges': [4],
+        }
+    ]
 
-    }).then(dd => {
-        console.log(dd);
+}).then(dd => {
+    console.log(dd);
 });
