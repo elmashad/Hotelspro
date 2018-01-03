@@ -4,7 +4,7 @@ const credentials = {
     username: 'CarsolizeCoral',
     password: 'Bm?q"]xZ&gZ658rM',
 };
-const hotelPro = new HotelPro('https://api-test.hotelspro.com/api/v2/','search/',credentials);
+const hotelPro = new HotelPro('https://api-test.hotelspro.com/api/v2/',credentials);
 
 
 const data = hotelPro.search({
@@ -27,6 +27,6 @@ const data = hotelPro.search({
         }
     ]
 
-}).then(dd => {
-    console.log(dd);
+}).then(result => {
+    console.log(result);
 });
